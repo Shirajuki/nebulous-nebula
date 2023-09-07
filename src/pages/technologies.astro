@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardGrid from "../components/CardGrid";
+import Hero from "../components/Hero";
+---
+
+<Layout title="Bun+Astro | technologies">
+  <main class="flex flex-col">
+    <Hero />
+
+    <section>
+      <h2 class="py-3 text-4xl text-gradient ![background-size:30%]">
+        Technologies
+      </h2>
+      <CardGrid />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: calc(70% - 2rem);
+    min-height: calc(100vh - 4rem);
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero";
+---
+
+<Layout title="Bun+Astro | index">
+  <main class="flex flex-col">
+    <Hero />
+    <section class="mb-6">
+      <h2 class="py-3 text-4xl text-gradient ![background-size:30%]">Bun</h2>
+      <p class="p-2">
+        Bun is a new JavaScript runtime built from scratch to serve the modern
+        JavaScript ecosystem. It has three major design goals:
+      </p>
+      <p>
+        <ul class="pl-6">
+          <li>
+            <strong>Speed.</strong> Bun starts fast and runs fast. It extends
+            JavaScriptCore, the performance-minded JS engine built for Safari.
+            As computing moves to the edge, this is critical.
+          </li>
+          <li>
+            <strong>Elegant APIs.</strong> Bun provides a minimal set of
+            highly-optimimized APIs for performing common tasks, like starting
+            an HTTP server and writing files.
+          </li>
+          <li>
+            <strong>Cohesive DX.</strong> Bun is a complete toolkit for building
+            JavaScript apps, including a package manager, test runner, and
+            bundler.
+          </li>
+        </ul>
+      </p>
+    </section>
+
+    <section class="mb-6">
+      <h2
+        class="py-3 text-4xl
+        text-gradient
+        ![background-size:30%]"
+      >
+        Astro
+      </h2>
+      <p class="p-2">
+        Astro is an all-in-one web framework for building fast, content-focused
+        websites.
+      </p>
+      <p>
+        <ul class="pl-6">
+          <li>
+            <strong>Component Islands:</strong> A new web architecture for
+            building faster websites.
+          </li>
+          <li>
+            <strong>Server-first API design:</strong> Move expensive hydration
+            off of your users' devices.
+          </li>
+          <li>
+            <strong>Zero JS, by default:</strong> No JavaScript runtime overhead
+            to slow you down.
+          </li>
+          <li>
+            <strong>Edge-ready:</strong> Deploy anywhere, even a global edge
+            runtime like Deno or Cloudflare.
+          </li>
+          <li>
+            <strong>Customizable:</strong> Tailwind, MDX, and 100+ other
+            integrations to choose from.
+          </li>
+          <li>
+            <strong>UI-agnostic:</strong> Supports React, Preact, Svelte, Vue,
+            Solid, Lit and more.
+          </li>
+        </ul>
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: calc(70% - 2rem);
+    min-height: calc(100vh - 4rem - 4rem);
+    line-height: 1.6;
+  }
+  li {
+    padding: 0.25rem 0;
+    position: relative;
+  }
+  li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    background: white;
+    transform: rotate(45deg);
+    width: 6px;
+    height: 6px;
+  }
+</style>
