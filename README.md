@@ -2,6 +2,7 @@
 
 ### 🥞 Stack
 
+- Runtime & toolkit - [Bun](https://bun.sh/)
 - Framework - [Astro](https://astro.build/)
 - Language - [TypeScript](https://www.typescriptlang.org/)
 - Hosting - [Netlify](https://netlify.com/)
