@@ -7,7 +7,7 @@ const endpoints = [
 ];
 const Navigation = () => {
   return (
-    <header className="flex items-center justify-between w-full h-16 [max-width:calc(70%-2rem)] mx-auto">
+    <header className="flex items-center justify-between w-[calc(100%-2rem)] h-16 max-w-[800px] mx-auto">
       <a href="/">
         <motion.h1
           className="text-2xl"
@@ -34,4 +34,5 @@ const Navigation = () => {
     </header>
   );
 };
+
 export default Navigation;

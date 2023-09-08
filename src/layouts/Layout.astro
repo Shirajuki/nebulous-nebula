@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
 }
@@ -16,49 +17,51 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Navigation client:load />
     <slot />
-    <Footer />
+    <Footer client:load />
+
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap");
+      :root {
+        --accent: 249, 188, 46;
+        --accent-light: 215, 210, 203;
+        --accent-dark: 232, 119, 34;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+        --title-font: "Pacifico", cursive;
+      }
+      html {
+        font-family: "Roboto", sans-serif;
+        background: #13151a;
+        background-size: 224px;
+        color: white;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .fancy-font {
+        font-family: var(--title-font);
+      }
+      .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap");
-  :root {
-    --accent: 249, 188, 46;
-    --accent-light: 215, 210, 203;
-    --accent-dark: 232, 119, 34;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-    --title-font: "Pacifico", cursive;
-  }
-  html {
-    font-family: "Roboto", sans-serif;
-    background: #13151a;
-    background-size: 224px;
-    color: white;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .fancy-font {
-    font-family: var(--title-font);
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-</style>

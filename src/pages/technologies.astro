@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CardGrid from "../components/CardGrid";
 import Hero from "../components/Hero";
+import SectionGallery from "../components/SectionGallery";
 ---
 
 <Layout title="Bun+Astro | technologies">
@@ -12,8 +13,14 @@ import Hero from "../components/Hero";
       <h2 class="py-3 text-4xl text-gradient ![background-size:30%]">
         Technologies
       </h2>
-      <CardGrid />
+      <CardGrid client:load />
     </section>
+
+    <div>
+      <p class="text-gradient fancy-font text-4xl text-center my-6">. . .</p>
+    </div>
+
+    <SectionGallery />
   </main>
 </Layout>
 
@@ -21,8 +28,8 @@ import Hero from "../components/Hero";
   main {
     margin: auto;
     padding: 1rem;
-    width: 100%;
-    max-width: calc(70% - 2rem);
+    width: calc(100% - 2rem);
+    max-width: 800px;
     min-height: calc(100vh - 4rem);
     line-height: 1.6;
   }
