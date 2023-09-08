@@ -2,6 +2,7 @@
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import { ViewTransitions } from "astro:transitions";
+import ScrollBar from "../components/ScrollBar";
 interface Props {
   title: string;
 }
@@ -23,6 +24,7 @@ const { title } = Astro.props;
     <Navigation client:load />
     <slot />
     <Footer client:load />
+    <ScrollBar client:load />
 
     <style is:global>
       @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap");

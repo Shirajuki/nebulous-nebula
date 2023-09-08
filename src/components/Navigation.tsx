@@ -7,7 +7,7 @@ const endpoints = [
 ];
 const Navigation = () => {
   return (
-    <header className="flex items-center justify-between w-[calc(100%-2rem)] h-16 max-w-[800px] mx-auto">
+    <header className="flex items-start py-5 justify-between w-[calc(100%-2rem)] h-16 max-w-[800px] mx-auto">
       <a href="/">
         <motion.h1
           className="text-2xl"
@@ -18,7 +18,7 @@ const Navigation = () => {
           Bun+Astro
         </motion.h1>
       </a>
-      <nav className="flex gap-5 fancy-font">
+      <nav className="flex flex-col gap-5 fancy-font sm:flex-row">
         {endpoints.map((endpoint) => (
           <motion.a
             key={endpoint.site}

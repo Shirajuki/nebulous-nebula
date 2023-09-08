@@ -7,7 +7,7 @@ const CardGrid = () => {
 
   return (
     <div className="relative my-2 bg-[rgb(var(--accent))] p-4 rounded-md">
-      <div className="grid grid-rows-3 grid-cols-[2fr_1fr_2fr] gap-3">
+      <div className="grid grid-rows-3 grid-cols-[2fr_1fr_1fr_1fr_2fr] gap-3">
         {items.map((item) => (
           <div key={item.id} className={item.span}>
             <AnimatePresence>

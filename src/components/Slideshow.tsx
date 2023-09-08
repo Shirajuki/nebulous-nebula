@@ -79,7 +79,7 @@ const Slideshow = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <span className="[line-height:1] absolute top-[1px] left-[12px]">
+            <span className="[line-height:1] absolute top-[1px] left-[12px] select-none">
               ‣
             </span>
           </motion.div>
@@ -90,7 +90,7 @@ const Slideshow = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <span className="[line-height:1] absolute top-[2px] left-[11px]">
+            <span className="[line-height:1] absolute top-[2px] left-[11px] select-none">
               ‣
             </span>
           </motion.div>

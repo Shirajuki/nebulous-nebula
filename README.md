@@ -1,5 +1,7 @@
 # Bun + Astro Test Kit
 
+Check the page out here: https://magical-queijadas-0f7dff.netlify.app
+
 ### 🥞 Stack
 
 - Runtime & toolkit - [Bun](https://bun.sh/)
